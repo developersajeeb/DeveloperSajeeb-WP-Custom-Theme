@@ -1,0 +1,295 @@
+// Variables
+@use "variables" as vars;
+
+// Hero section image
+.hero-bg {
+    padding: 180px 15px 80px 15px;
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 140px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 120px 15px 56px 15px;
+    }
+
+    .hero-section-container {
+        max-width: 1650px;
+        margin-right: auto;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: repeat(11, minmax(0, 1fr));
+        gap: 30px;
+        align-items: center;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .intro-text {
+            grid-column: span 4 / span 4;
+
+            h3 {
+                color: vars.$color-gray;
+                font-size: 45px;
+                font-weight: 400;
+                line-height: 1em;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: vars.$primary-color;
+                font-size: 65px;
+                font-weight: 700;
+                line-height: 1.1em;
+                letter-spacing: -0.03em;
+                margin-bottom: 5px;
+            }
+
+            h1 {
+                color: vars.$color-white;
+                font-size: 65px;
+                font-weight: 400;
+                line-height: 1.1em;
+                letter-spacing: -0.03em;
+            }
+
+            p {
+                margin: 40px 0px;
+            }
+
+            @media screen and (max-width: 1366px) {
+                h3 {
+                    font-size: 35px;
+                }
+
+                h2 {
+                    font-size: 54px;
+                }
+
+                h1 {
+                    font-size: 54px;
+                }
+            }
+
+            @media screen and (max-width: 1200px) {
+                h3 {
+                    font-size: 30px;
+                }
+
+                h2 {
+                    font-size: 46px;
+                }
+
+                h1 {
+                    font-size: 46px;
+                }
+            }
+
+            @media screen and (max-width: 1024px) {
+                grid-column: span 6 / span 6;
+            }
+
+            @media screen and (max-width: 767px) {
+                grid-column: span 1 / span 1;
+
+                h2 {
+                    font-size: 42px;
+                }
+
+                h1 {
+                    font-size: 42px;
+                }
+
+                p {
+                    margin: 24px 0px;
+                }
+            }
+
+        }
+
+        .middle-image {
+            grid-column: span 4 / span 4;
+
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            @media screen and (max-width: 1024px) {
+                display: none;
+            }
+
+            @media screen and (max-width: 767px) {
+                grid-column: span 1 / span 1;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 500px;
+                }
+            }
+        }
+
+        .hero-right-content {
+            grid-column: span 3 / span 3;
+            display: flex;
+            justify-content: end;
+
+            .right-content-wrap {
+                background-color: vars.$secondary-dark;
+                border-radius: 16px;
+                padding: 40px;
+                color: vars.$color-gray;
+
+                @media screen and (max-width: 1200px) {
+                    padding: 40px 30px;
+                    width: 100%;
+                }
+
+                h3 {
+                    font-size: 40px;
+                    font-weight: 500;
+                    line-height: 1;
+                    color: vars.$primary-color;
+                    padding: 25px 0px 15px 0px;
+
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                }
+
+                p {
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 1.4;
+                    padding-bottom: 25px;
+                    border-bottom: 1px solid #353535;
+
+                    &:last-child {
+                        padding-bottom: 0px;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1024px) {
+                grid-column: span 5 / span 5;
+            }
+
+            @media screen and (max-width: 767px) {
+                grid-column: span 1 / span 1;
+            }
+        }
+    }
+
+    .responsive-image {
+        display: none;
+        padding-top: 30px;
+
+        .responsive-image-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 767px) and (max-width: 1024px) {
+            display: block;
+        }
+    }
+}
+
+.portfolio-section-wrap {
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    .services-heading {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .portfolio-vew-btn {
+        text-align: center;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .services-heading {
+            margin-bottom: 40px;
+        }
+    }
+
+}
+
+// Blog section
+.blog-section-container {
+    max-width: 1670px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+
+    .blog-section-wrap {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: 1024px) {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            margin-bottom: 50px;
+        }
+
+        .blog-heading {
+            text-align: center;
+        }
+
+        .blog-items-wrap {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+
+            @media screen and (max-width: 1024px) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            @media screen and (max-width: 767px) {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            // Card design in Utils file
+
+        }
+
+        .blogs-more-btn-wrap {
+            margin-top: 60px;
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                margin-top: 40px;
+            }
+
+            .more-blogs-btn {
+                &:hover {
+                    background-color: vars.$secondary-light;
+                }
+            }
+        }
+    }
+}

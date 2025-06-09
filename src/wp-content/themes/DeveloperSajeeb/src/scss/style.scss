@@ -1,0 +1,41 @@
+/*
+Theme Name: DeveloperSajeeb
+Author: Sajeeb Debnath
+URL: www.developersajeeb.com
+Front End Developer: Sajeeb Debnath
+Back End Developer:  Sajeeb Debnath
+*/
+
+// Common CSS
+@use "common.scss";
+
+// Header CSS
+@use "header.scss";
+
+// Footer CSS
+@use "footer.scss";
+
+// Pages CSS
+@use "pages/page.scss";
+@use "pages/home.scss";
+@use "pages/portfolio-page.scss";
+@use "pages/about.scss";
+@use "pages/contact.scss";
+@use "pages/portfolio-details.scss";
+@use "pages/index.scss";
+@use "pages/archive.scss";
+@use "pages/search.scss";
+@use "pages/single.scss";
+
+// Template Parts CSS
+@use "template-part/_about_me.scss";
+@use "template-part/_client_logo_slider.scss";
+@use "template-part/_clients_testimonials.scss";
+@use "template-part/_my_skills.scss";
+@use "template-part/_need_service_form.scss";
+@use "template-part/_portfolio_cards.scss";
+@use "template-part/_service_list.scss";
+@use "template-part/comment.scss";
+
+// Utils CSS
+@use "utils.scss";

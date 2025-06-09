@@ -1,0 +1,103 @@
+// Variables
+@use "variables" as vars;
+
+.blog-page-container {
+    padding-top: 180px;
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 140px;
+    }
+
+    .blog-heading {
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 24px;
+            line-height: 28px;
+        }
+
+        @media screen and (max-width: 767px) {
+            h2 {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .feature-section {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+
+        .feature-big-card {
+            background-color: transparent;
+            border: none;
+            padding: 0px;
+            border-radius: 0px;
+
+            &.feature-small-card .blog-thumb {
+                height: 280px;
+            }
+
+            .blog-thumb {
+                height: 412px;
+                background-color: vars.$secondary-light;
+            }
+
+            .blog-item-content {
+                .feature-read-more {
+                    color: vars.$color-gray;
+                    padding: 12px 22px 13px 22px;
+                    border-radius: 30px;
+                    border: 1px solid vars.$secondary-medium;
+
+                    &:hover {
+                        color: vars.$color-white;
+                    }
+                }
+            }
+        }
+
+        .feature-small-cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+
+            .feature-title {
+                grid-column: span 2 / span 2;
+
+                h3 {
+                    font-size: 48px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    color: vars.$color-white;
+                    text-align: end;
+                    margin-bottom: 34px;
+
+                    span {
+                        font-size: 52px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            margin-top: 80px;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+
+            .feature-small-cards {
+                .feature-title {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-top: 60px;
+
+            .feature-small-cards {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+        }
+    }
+}
