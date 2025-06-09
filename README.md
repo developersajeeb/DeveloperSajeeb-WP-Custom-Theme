@@ -71,6 +71,5 @@ This theme is built for personal portfolio use only. Do not redistribute without
 For any questions or support, contact:
 
 **Sajeeb**  
-info@developersajeeb.com (mail)
-+8801743370840 (whatsapp)  
+info@developersajeeb.com
 [www.developersajeeb.com](https://www.developersajeeb.com)
